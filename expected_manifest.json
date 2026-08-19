@@ -1,0 +1,86 @@
+{
+  "image_path": "C:\\Users\\rajj2\\OneDrive\\Desktop\\Recovery_Software\\test_disk.img",
+  "disk_size_bytes": 10485760,
+  "disk_image_sha256": "a17a2af4230d6b15856d79c402f819818789e0cc72fc1a31a558ee22b8ba089e",
+  "total_files": 6,
+  "files": [
+    {
+      "name": "sample_jpeg_unaligned",
+      "file_type": "JPEG Image",
+      "extension": "jpg",
+      "start_offset": 1337,
+      "start_offset_hex": "0x00000539",
+      "end_offset": 1486,
+      "end_offset_hex": "0x000005CE",
+      "size_bytes": 149,
+      "sha256": "f6efc8506ab1fbcf45c47e78e759506b4b6c47655d4b40195328e077e4c96604",
+      "expected_status": "recovered_high_confidence",
+      "has_nested_match": false
+    },
+    {
+      "name": "sample_png_aligned",
+      "file_type": "PNG Image",
+      "extension": "png",
+      "start_offset": 10240,
+      "start_offset_hex": "0x00002800",
+      "end_offset": 10309,
+      "end_offset_hex": "0x00002845",
+      "size_bytes": 69,
+      "sha256": "b1ff9c8ea3a780bad09b346c423d2d0e46815926879b18e841d928376a946640",
+      "expected_status": "recovered_high_confidence",
+      "has_nested_match": false
+    },
+    {
+      "name": "sample_jpeg_with_nested_header",
+      "file_type": "JPEG Image",
+      "extension": "jpg",
+      "start_offset": 51207,
+      "start_offset_hex": "0x0000C807",
+      "end_offset": 51419,
+      "end_offset_hex": "0x0000C8DB",
+      "size_bytes": 212,
+      "sha256": "fc48e8ec2139b65ed04e96fb5bad545c39513e84c82569c0b1cf3052f02b3c62",
+      "expected_status": "recovered_high_confidence",
+      "has_nested_match": true
+    },
+    {
+      "name": "sample_pdf_unaligned",
+      "file_type": "PDF Document",
+      "extension": "pdf",
+      "start_offset": 1048889,
+      "start_offset_hex": "0x00100139",
+      "end_offset": 1049362,
+      "end_offset_hex": "0x00100312",
+      "size_bytes": 473,
+      "sha256": "d5ccd45de288859a0560742d1f6321ebb429d56d1eaaf3338dda48c0b1264586",
+      "expected_status": "recovered_high_confidence",
+      "has_nested_match": false
+    },
+    {
+      "name": "sample_png_corrupt_crc",
+      "file_type": "PNG Image",
+      "extension": "png",
+      "start_offset": 2097664,
+      "start_offset_hex": "0x00200200",
+      "end_offset": 2097733,
+      "end_offset_hex": "0x00200245",
+      "size_bytes": 69,
+      "sha256": "b06c924d75ca1cbcc099ac1cde8a3da320e7d47667eb298b60616778470d0ef9",
+      "expected_status": "recovered_low_confidence",
+      "has_nested_match": false
+    },
+    {
+      "name": "sample_zip_aligned",
+      "file_type": "ZIP Archive / Office XML",
+      "extension": "zip",
+      "start_offset": 4194304,
+      "start_offset_hex": "0x00400000",
+      "end_offset": 4194663,
+      "end_offset_hex": "0x00400167",
+      "size_bytes": 359,
+      "sha256": "0c261b840c0ac0c0e373a326ac46136f55fec855c3399b41ce6f84d76ac0b319",
+      "expected_status": "recovered_high_confidence",
+      "has_nested_match": false
+    }
+  ]
+}

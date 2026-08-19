@@ -1,0 +1,123 @@
+{
+  "forensic_tool": "RecoverySoftware File Carver",
+  "version": "1.0.0 (Phase 1)",
+  "dry_run": false,
+  "scan_metadata": {
+    "source_image_path": "C:\\Users\\rajj2\\OneDrive\\Desktop\\Recovery_Software\\test_disk.img",
+    "source_image_size_bytes": 10485760,
+    "source_image_sha256": "a17a2af4230d6b15856d79c402f819818789e0cc72fc1a31a558ee22b8ba089e",
+    "scan_start_utc": "2026-08-19T03:47:28.469135+00:00",
+    "scan_end_utc": "2026-08-19T03:47:36.065206+00:00",
+    "elapsed_seconds": 7.6,
+    "total_bytes_scanned": 10485760,
+    "scan_throughput_mbps": 1.32
+  },
+  "summary": {
+    "total_recovered_files": 6,
+    "high_confidence_count": 5,
+    "low_confidence_count": 1,
+    "nested_or_skipped_count": 2
+  },
+  "recovered_files": [
+    {
+      "file_id": 1,
+      "filename": "recovered_0001.jpg",
+      "file_type": "JPEG Image",
+      "extension": "jpg",
+      "start_offset_dec": 1337,
+      "start_offset_hex": "0x00000539",
+      "end_offset_dec": 1486,
+      "end_offset_hex": "0x000005CE",
+      "size_bytes": 149,
+      "status": "recovered_high_confidence",
+      "confidence_notes": "Valid JPEG SOI and EOI markers",
+      "sha256": "f6efc8506ab1fbcf45c47e78e759506b4b6c47655d4b40195328e077e4c96604"
+    },
+    {
+      "file_id": 2,
+      "filename": "recovered_0002.png",
+      "file_type": "PNG Image",
+      "extension": "png",
+      "start_offset_dec": 10240,
+      "start_offset_hex": "0x00002800",
+      "end_offset_dec": 10309,
+      "end_offset_hex": "0x00002845",
+      "size_bytes": 69,
+      "status": "recovered_high_confidence",
+      "confidence_notes": "Valid PNG header and verified IEND chunk",
+      "sha256": "b1ff9c8ea3a780bad09b346c423d2d0e46815926879b18e841d928376a946640"
+    },
+    {
+      "file_id": 3,
+      "filename": "recovered_0003.jpg",
+      "file_type": "JPEG Image",
+      "extension": "jpg",
+      "start_offset_dec": 51207,
+      "start_offset_hex": "0x0000C807",
+      "end_offset_dec": 51419,
+      "end_offset_hex": "0x0000C8DB",
+      "size_bytes": 212,
+      "status": "recovered_high_confidence",
+      "confidence_notes": "Valid JPEG SOI and EOI markers",
+      "sha256": "fc48e8ec2139b65ed04e96fb5bad545c39513e84c82569c0b1cf3052f02b3c62"
+    },
+    {
+      "file_id": 4,
+      "filename": "recovered_0004.pdf",
+      "file_type": "PDF Document",
+      "extension": "pdf",
+      "start_offset_dec": 1048889,
+      "start_offset_hex": "0x00100139",
+      "end_offset_dec": 1049362,
+      "end_offset_hex": "0x00100312",
+      "size_bytes": 473,
+      "status": "recovered_high_confidence",
+      "confidence_notes": "Valid PDF header and %%EOF trailer",
+      "sha256": "d5ccd45de288859a0560742d1f6321ebb429d56d1eaaf3338dda48c0b1264586"
+    },
+    {
+      "file_id": 5,
+      "filename": "recovered_0005.png",
+      "file_type": "PNG Image",
+      "extension": "png",
+      "start_offset_dec": 2097664,
+      "start_offset_hex": "0x00200200",
+      "end_offset_dec": 2097733,
+      "end_offset_hex": "0x00200245",
+      "size_bytes": 69,
+      "status": "recovered_low_confidence",
+      "confidence_notes": "IEND CRC mismatch (expected 0xae426082, found 0xae426000)",
+      "sha256": "b06c924d75ca1cbcc099ac1cde8a3da320e7d47667eb298b60616778470d0ef9"
+    },
+    {
+      "file_id": 6,
+      "filename": "recovered_0006.zip",
+      "file_type": "ZIP Archive / Office XML",
+      "extension": "zip",
+      "start_offset_dec": 4194304,
+      "start_offset_hex": "0x00400000",
+      "end_offset_dec": 4194663,
+      "end_offset_hex": "0x00400167",
+      "size_bytes": 359,
+      "status": "recovered_high_confidence",
+      "confidence_notes": "Valid ZIP local header and EOCD record",
+      "sha256": "0c261b840c0ac0c0e373a326ac46136f55fec855c3399b41ce6f84d76ac0b319"
+    }
+  ],
+  "nested_or_skipped": [
+    {
+      "file_type": "JPEG Image",
+      "start_offset_dec": 51263,
+      "start_offset_hex": "0x0000C83F",
+      "parent_range_hex": "[0x0000C807 - 0x0000C8DB]",
+      "reason": "Nested sub-header within claimed region (outer match wins)"
+    },
+    {
+      "file_type": "ZIP Archive / Office XML",
+      "start_offset_dec": 4194402,
+      "start_offset_hex": "0x00400062",
+      "parent_range_hex": "[0x00400000 - 0x00400167]",
+      "reason": "Nested sub-header within claimed region (outer match wins)"
+    }
+  ]
+}

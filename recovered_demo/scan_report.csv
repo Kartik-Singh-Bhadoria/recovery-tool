@@ -1,0 +1,7 @@
+File_ID,Filename,File_Type,Extension,Start_Offset_Dec,Start_Offset_Hex,End_Offset_Dec,End_Offset_Hex,Size_Bytes,Status,Confidence_Notes,SHA256
+1,recovered_0001.jpg,JPEG Image,jpg,1337,0x00000539,1486,0x000005CE,149,recovered_high_confidence,Valid JPEG SOI and EOI markers,f6efc8506ab1fbcf45c47e78e759506b4b6c47655d4b40195328e077e4c96604
+2,recovered_0002.png,PNG Image,png,10240,0x00002800,10309,0x00002845,69,recovered_high_confidence,Valid PNG header and verified IEND chunk,b1ff9c8ea3a780bad09b346c423d2d0e46815926879b18e841d928376a946640
+3,recovered_0003.jpg,JPEG Image,jpg,51207,0x0000C807,51419,0x0000C8DB,212,recovered_high_confidence,Valid JPEG SOI and EOI markers,fc48e8ec2139b65ed04e96fb5bad545c39513e84c82569c0b1cf3052f02b3c62
+4,recovered_0004.pdf,PDF Document,pdf,1048889,0x00100139,1049362,0x00100312,473,recovered_high_confidence,Valid PDF header and %%EOF trailer,d5ccd45de288859a0560742d1f6321ebb429d56d1eaaf3338dda48c0b1264586
+5,recovered_0005.png,PNG Image,png,2097664,0x00200200,2097733,0x00200245,69,recovered_low_confidence,"IEND CRC mismatch (expected 0xae426082, found 0xae426000)",b06c924d75ca1cbcc099ac1cde8a3da320e7d47667eb298b60616778470d0ef9
+6,recovered_0006.zip,ZIP Archive / Office XML,zip,4194304,0x00400000,4194663,0x00400167,359,recovered_high_confidence,Valid ZIP local header and EOCD record,0c261b840c0ac0c0e373a326ac46136f55fec855c3399b41ce6f84d76ac0b319
